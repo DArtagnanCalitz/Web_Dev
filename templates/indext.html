@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Car Camping Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Solo Car Camping Blog</h1>
+        <p>Your guide to adventurous and informed solo car camping in California</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Camping Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#gear">Gear Recommendations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#campsites">Campsites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#weather">Weather</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#community">Community Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#practices">Best Practices</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <section id="gear" class="my-5">
+            <h2 class="text-primary">Gear Recommendations</h2>
+            <p>Discover essential camping gear tailored for solo adventurers. Check reviews and find purchase links to gear that suits your needs.</p>
+            <ul>
+                <li>Lightweight tent - <a href="https://www.amazon.com/Kelty-Late-Start-Backpacking-Tent/dp/B07ML4F9HR?crid=14CIP7RD8IFGW&dib=eyJ2IjoiMSJ9.mBXjKEpqKpgLooTWggKzVJ6vd60mU7ZVaX3-Q_I4Hv84aovj4nsDHuDCyFqkgDg0BKPW-P9c9B1cjvxJIWkqfJuP8Za1sTLGzSji_myHAuOWoXgSaP7R18f2MejEq6BtCjdD7iyvxGlSmYmJRsjjOuV7Fgs7ZxDXiIPnjZEAPj-kzrKK5xgyUDdWDtM-Cvvfp2Sfykjrf8kQSo0P1H4-klCQO5GdsLN41xttThGXg-o.h0YcfHSADYdYUUXhkhLrivKydYCkYGQ53SeLXSjkeRI&dib_tag=se&keywords=light+weight+tent&qid=1734116819&sprefix=light+weaight+tent,aps,319&sr=8-16&th=1">Read reviews</a></li>
+                <li>Portable stove - <a href="https://www.amazon.com/Fire-Maple-Personal-Equipment-Portable-Ultralight/dp/B07F2VP353?crid=2K7BRL9K3HI19&dib=eyJ2IjoiMSJ9.hGyvKdzomNv0EwL-LJS6iOx1sVola4EuBUYA_tH2toK4Kvogw937TNMtgKogc1wKmJNlfq9XI8H5Q9d6YDqKeYeVufntcdOmxBNl7PR_WpXkCXlG5FCr-RyJOJ4lGa3ay-mQkYBU7gGGZ5mVguUmDJFhFG-yA5NqqZ3nYnVrKpezR8MIVRkigzgAg6qklkuV8HnEoyCKwlTO4URya5feeR2Ts5vYbKUXCuTN-QLA9Zo.N0P6KoJ6b4J25-mqx8X_DPjwklPTHUO24yvaYhMTkJs&dib_tag=se&keywords=portable+stove+backpacking&qid=1734116869&sprefix=portable+stove+ba,aps,199&sr=8-4">Buy now</a></li>
+                <li>Durable backpack - <a href="https://www.rei.com/product/151847/hyperlite-mountain-gear-southwest-40-pack?sku=1518470005&store=17&gStoreCode=17&gQT=1">Compare options</a></li>
+            </ul>
+        </section>
+
+        <section id="campsites" class="my-5">
+            <h2 class="text-danger">Campsites</h2>
+            <p>Explore the best camping locations in California with our interactive map.</p>
+            <div>
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1rT8uRxqWPSxNQJPxCcjmJ33t691SDh3k&ll=34.23390813066674,-116.89933250000001&z=11" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"></iframe>
+            </div>
+        </section>
+        
+
+        <section id="weather" class="my-5">
+            <h2 class="text-warning">Real-Time Weather</h2>
+            <p>Stay updated with live weather forecasts for various camping spots to ensure a safe and enjoyable trip.</p>
+            <div id="weather-widget">
+                <p>Loading weather data...</p>
+            </div>
+        </section>
+
+        <section id="community" class="my-5">
+            <h2 class="text-success">Community Stories</h2>
+            <p>Share your camping experiences and learn from fellow adventurers. Build a community that values nature and exploration.</p>
+            <form id="story-form">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label for="story" class="form-label">Your Story</label>
+                    <textarea class="form-control" id="story" rows="4" placeholder="Share your experience"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </section>
+
+        <section id="practices" class="my-5">
+            <h2 class="text-purple">Best Practices</h2>
+            <p>Learn about camping etiquette, safety tips, and how to preserve the environment while enjoying the outdoors responsibly.</p>
+            <ul>
+                <li>Follow Leave No Trace principles.</li>
+                <li>Respect wildlife and their habitats.</li>
+                <li>Keep campfires under control and extinguish them properly.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Solo Car Camping Blog. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
